@@ -32,37 +32,36 @@ a {
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--header);
   padding-left: 40px;
   padding-right: 40px;
 }
 
 @midia screen and (max-width: 1536px) {
-    .wrapper {
-        max-width: 1366px;
-    }
+  .wrapper {
+    max-width: 1366px;
+  }
 }
 
 @midia screen and (max-width: 1280px) {
-    .wrapper {
-        max-width: 1024px;
-    }
+  .wrapper {
+    max-width: 1024px;
+  }
 }
 
 @midia screen and (max-width: 1024px) {
-    .wrapper {
-        max-width: 768px;
-    }
+  .wrapper {
+    max-width: 768px;
+  }
 }
 
 @midia screen and (max-width: 768px) {
-    .wrapper {
-        max-width: 640px;
-    }
+  .wrapper {
+    max-width: 640px;
+  }
 }
 
 @midia screen and (max-width: 640px) {
-    .wrapper {
-        max-width: 475px;
-    }
+  .wrapper {
+    max-width: 475px;
+  }
 }
