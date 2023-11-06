@@ -1,12 +1,14 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import "./globals.css";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Blog App',
-  description: 'The best blog app!',
-}
+  title: "Sant Ralph Magazine",
+  description: "The best blog app!",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -14,11 +16,12 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="container">
           <div className="wrapper">
-          {children}
+            <Header />
+            {children}
+            <Footer />
           </div>
-        
-</div>
-        </body>
+        </div>
+      </body>
     </html>
-  )
+  );
 }
