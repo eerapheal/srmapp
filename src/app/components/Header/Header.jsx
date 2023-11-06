@@ -8,10 +8,10 @@ import ThemeToggle from "../themeToggle/themeToggle";
 const Header = () => {
   return (
     <div className={styles.container}>
-      <div className="styles.logo">
+      <div className={styles.logo}>
         <h1>SRM</h1>
       </div>
-      <div className={styles.socical}>
+      <div className={styles.social}>
        <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
        <Image src="/youtube.png" alt="Youtube" width={24} height={24} />
        <Image src="/instagram.png" alt="Instagram" width={24} height={24} />

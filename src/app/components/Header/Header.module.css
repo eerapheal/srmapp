@@ -1,0 +1,33 @@
+.container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 80px;
+}
+
+.logo {
+  align-items: center;
+  background-color: var(--header);
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #fff;
+
+}
+
+.social {
+  display: flex;
+align-items: center;
+gap: 10px;
+font-size: 38px;
+font-weight: bold;
+}
+
+.links {
+  display: flex;
+align-items: center;
+gap: 10px;
+font-size: 22px;
+}

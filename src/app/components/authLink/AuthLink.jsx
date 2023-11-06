@@ -1,12 +1,21 @@
-import React from 'react';
-import styles from "./authLink.module.css"
-
+import React from "react";
+import styles from "./authLink.module.css";
+import Link from "next/link"
 const AuthLink = () => {
-  return (
-    <div className={styles.container}>
-      Authlink
-    </div>
-  )
-}
+  const status = "notauth";
 
-export default AuthLink
+  return (
+    <>
+      {status === "notauth" ? (
+        <Link href="/login">Login</Link>
+      ) : (
+        <>
+          <Link href="/create">Create</Link>
+          <span>Logout</span>
+        </>
+      )}
+    </>
+  );
+};
+
+export default AuthLink;
