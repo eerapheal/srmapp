@@ -2,6 +2,8 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import Link from "next/link";
 import React from 'react'
+import AuthLink from "../authLink/AuthLink";
+import ThemeToggle from "../themeToggle/themeToggle";
 
 const Header = () => {
   return (
@@ -20,6 +22,8 @@ const Header = () => {
         <Link href="/" >Home</Link>
         <Link href="/" >About</Link>
         <Link href="/" >Contact</Link>
+        <AuthLink />
+        <ThemeToggle />
       </div>
     </div>
   )
