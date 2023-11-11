@@ -16,7 +16,7 @@ const Header = () => {
        <Image src="/youtube.png" alt="Youtube" width={24} height={24} />
        <Image src="/instagram.png" alt="Instagram" width={24} height={24} />
        <Image src="/tiktok.png" alt="Tiktok" width={24} height={24} />
-       <Image src="/moon.png" alt="Twitter" width={24} height={24} />
+       <Image src="/x.jpg" alt="Twitter" width={24} height={24} />
       </div>
       <div className={styles.links}>
         <Link href="/" >Home</Link>
