@@ -1,0 +1,51 @@
+.container {
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 39px;
+}
+
+.post {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.postImg {
+  flex: 1;
+  height: 300px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textcontainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postTitle {
+  font-size: 40px;
+}
+
+.postDesc {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--softTextColor);
+}
+
+.postBTN {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--header);
+  color: aliceblue;
+  font-size: 22px;
+  font-weight: 300;
+}
