@@ -1,0 +1,36 @@
+.container {
+  margin-top: 60px;
+}
+
+.wrapper {
+background-color: var(--softBg);
+padding: 150px 200px;
+display: flex;
+flex-direction: column;
+gap: 100px;
+border: 10px;
+}
+
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border:none;
+    color: azure;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:first-child{
+background-color: rgb(248, 50, 50);
+}
+
+.btn:nth-child(2){
+    background-color: blue;
+    }
+
+    .btn:nth-child(3){
+        background-color: #000;
+        }
