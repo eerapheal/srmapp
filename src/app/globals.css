@@ -49,8 +49,8 @@ a {
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 @midia screen and (max-width: 1536px) {
@@ -81,4 +81,12 @@ a {
   .wrapper {
     max-width: 475px;
   }
+}
+
+.ql-container {
+font-size: 28px !important;
+}
+
+.qull > .ql-container > .ql-editor.ql-blank::before {
+  color: #b3b3b1;
 }
