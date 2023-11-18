@@ -1,13 +1,18 @@
 import styles from "./Menu.module.css";
-
-import React from 'react'
+import React from "react";
+import Popular from "./Popular";
+import MenuCatelogriesList from "./MenuCatelogriesList";
+import EditorPick from "./EditorPick";
 
 const Menu = () => {
   return (
     <div className={styles.container}>
-      Menu
+      <h2 className={styles.hot}>{"what's hot"}</h2>
+      <Popular />
+      <MenuCatelogriesList />
+      <EditorPick />
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
