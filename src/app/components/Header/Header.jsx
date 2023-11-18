@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <h1>SRM</h1>
+      <Image  className={styles.logoicon} src="/Srmlogo.jpg" alt="SRM" width={50} height={50} />
       </div>
       <div className={styles.social}>
        <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
@@ -19,7 +19,7 @@ const Header = () => {
        <Image src="/x.jpg" alt="Twitter" width={24} height={24} />
       </div>
       <div className={styles.links}>
-        <Link href="/" className={styles.link}>Home</Link>
+        <Link href="/blog" className={styles.link}>Home</Link>
         <Link href="/" className={styles.link}>About</Link>
         <Link href="/" className={styles.link}>Contact</Link>
         <AuthLink />
