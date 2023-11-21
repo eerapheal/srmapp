@@ -1,82 +1,50 @@
-import Image from "next/image";
+"use client"
 import styles from "./categoryList.module.css";
 import Link from "next/link";
-import React from "react";
+import Image from "next/image"
+import React, { useEffect, useState } from "react";
 
 const CategoryList = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/categories", { catch: "no-store" });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        throw new Error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className={styles.container}>
-        <h1 className={styles.title}>Categories</h1>
-        <div className={styles.categories}>
+      <div className={styles.categories}>
+        {data.map((item) => (
           <Link
-            href="/blog?cat=liftStyle"
-            className={`${styles.category} ${styles.liftStyle}`}
+            href={`/blog?cat=${item.slug}`}
+            className={`${styles.category} ${styles[item.slug]}`}
+            key={item.id}
           >
             <Image
-              src="/style.png"
-              alt="cat"
+              src={`/${item.image}`}
+              alt={item.title}
               width={32}
               height={32}
               className={styles.image}
             />
-            LiftStyle
+            <p>{item.title}</p>
           </Link>
-          {/*  */}
-          <Link
-            href="/blog?cat=sport"
-            className={`${styles.category} ${styles.sport}`}
-          >
-            <Image
-              src="/style.png"
-              alt="cat"
-              width={32}
-              height={32}
-              className={styles.image}
-            />
-            Sport
-          </Link>
-          {/*  */}
-          <Link
-            href="/blog?cat=health"
-            className={`${styles.category} ${styles.health}`}
-          >
-            <Image
-              src="/style.png"
-              alt="cat"
-              width={32}
-              height={32}
-              className={styles.image}
-            />
-            Health
-          </Link>
-          {/*  */}
-          <Link
-            href="/blog?cat=technology"
-            className={`${styles.category} ${styles.technology}`}
-          >
-            <Image
-              src="/style.png"
-              alt="cat"
-              width={32}
-              height={32}
-              className={styles.image}
-            />
-            Technology
-          </Link>
-          {/*  */}
-          <Link
-            href="/blog?cat=treandingsNews"
-            className={`${styles.category} ${styles.treandingsNews}`}
-          >
-            <Image
-              src="/style.png"
-              alt="cat"
-              width={32}
-              height={32}
-              className={styles.image}
-            />
-            TreandingsNews
-          </Link>
+        ))}
       </div>
     </div>
   );
