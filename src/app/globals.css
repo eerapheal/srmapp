@@ -15,14 +15,15 @@
 .light {
   --bg: #ecf3ed;
   --textColor: #050605;
-  --header: #087d08;
+  --header: #E3FCF7;
   --smallTextColor: #1f261f;
-  --softBg: #f0f0f0;
+  --softBg: #a6a6a6;
 }
 
 .dark {
-  --bg: #1847b6;
+  --bg: #061621;
   --softBg: #1f273a;
+  --header: #1f273a;
   --textColor: #ddd;
   --softTextColor: #a6a6a6;
 }
