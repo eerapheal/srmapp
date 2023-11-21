@@ -3,13 +3,15 @@ import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = () => {
+const Card = ({key, item}) => {
+  // console.log(item);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} key={key}>
       {/* <div  className={styles.post}> */}
       <div className={styles.post}>
         <div className={styles.postImg}>
-          <Image src="/p1.jpeg" alt="lo" className={styles.image} fill />
+          <Image src="/p1.jpeg" alt="lo" className={styles.image} max-width={300} fill />
         </div>
         <div className={styles.textcontainer}>
           <div className={styles.details}>
@@ -18,7 +20,9 @@ const Card = () => {
           </div>
           <Link href="/">
             {" "}
-            <h1 className={styles.postTitle}>Yes Testing</h1>
+            <h1 className={styles.postTitle}>
+              {item && item.title}
+            </h1>
           </Link>
           <p className={styles.postDesc}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
