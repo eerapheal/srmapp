@@ -4,9 +4,11 @@ import Link from "next/link";
 import React from 'react'
 import AuthLink from "../authLink/AuthLink";
 import ThemeToggle from "../themeToggle/themeToggle";
+import CategoryList from "../CategoryList/CategoryList"
 
 const Header = () => {
   return (
+    <div>
     <div className={styles.container}>
       <div className={styles.logo}>
       <Image  className={styles.logoicon} src="/Srmlogo.jpg" alt="SRM" width={50} height={50} />
@@ -25,6 +27,8 @@ const Header = () => {
         <AuthLink />
         <ThemeToggle />
       </div>
+      </div>
+      <CategoryList />
     </div>
   )
 }

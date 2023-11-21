@@ -1,7 +1,7 @@
 import styles from "./Menu.module.css";
 import React from "react";
 import Popular from "./Popular";
-import MenuCatelogriesList from "./MenuCatelogriesList";
+// import MenuCatelogriesList from "./MenuCatelogriesList";
 import EditorPick from "./EditorPick";
 
 const Menu = () => {
@@ -9,7 +9,7 @@ const Menu = () => {
     <div className={styles.container}>
       <h2 className={styles.hot}>{"what's hot"}</h2>
       <Popular />
-      <MenuCatelogriesList />
+      
       <EditorPick />
     </div>
   );
