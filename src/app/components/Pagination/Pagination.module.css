@@ -17,6 +17,11 @@
 
 }
 
+.left:disabled {
+  border-color: rgba(220,20,60,0.473);
+  cursor: not-allowed;
+}
+
 .right {
   padding: 8px 12px;
   background-color: #1a8917;
@@ -26,6 +31,9 @@
   border: none;
   border-end-start-radius: 10px;
   border-start-end-radius: 10px;
+}
 
- 
+.right:disabled {
+  border-color: rgba(220,20,60,0.473);
+  cursor: not-allowed;
 }
