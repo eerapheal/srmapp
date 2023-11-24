@@ -1,7 +1,6 @@
 import styles from "./Menu.module.css";
 import React from "react";
 import Popular from "./Popular";
-// import MenuCatelogriesList from "./MenuCatelogriesList";
 import EditorPick from "./EditorPick";
 
 const Menu = () => {
