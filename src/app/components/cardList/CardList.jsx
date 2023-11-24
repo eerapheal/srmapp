@@ -1,42 +1,43 @@
-// CardList.jsx
-"use client";
-import Pagination from "../Pagination/Pagination";
+import React from "react";
 import styles from "./cardList.module.css";
-import React, { useEffect, useState } from "react";
+import Pagination from "../pagination/Pagination";
+import Image from "next/image";
 import Card from "./Card";
 
-const CardList = ({ page }) => {
-  const [data, setData] = useState([]);
+const getData = async (page, cat) => {
+  const res = await fetch(
+    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    {
+      cache: "no-store",
+    }
+  );
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
-          cache: "no-store",
-        });
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
+  return res.json();
+};
 
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+const CardList = async ({ page, cat }) => {
+  const { posts, count } = await getData(page, cat);
 
-    fetchData(); // Removed 'page' parameter here
-  }, [page]);
+  const POST_PER_PAGE = 2;
+
+  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
+  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
   return (
     <div className={styles.container}>
-      <div>
-        {data.map((item) => (
+      <h1 className={styles.title}>Recent Posts</h1>
+      <div className={styles.posts}>
+        {posts?.map((item) => (
           <Card item={item} key={item._id} />
+         
         ))}
       </div>
-      <Pagination />
+      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
+      
     </div>
   );
 };
