@@ -17,12 +17,12 @@
 
 }
 
-.left:disabled {
+.button:disabled {
   border-color: rgba(220,20,60,0.473);
   cursor: not-allowed;
 }
 
-.right {
+.button {
   padding: 8px 12px;
   background-color: #1a8917;
   color: #fff;

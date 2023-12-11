@@ -4,24 +4,27 @@ import styles from "./Pagination.module.css";
 import React from "react";
 import { useRouter } from "next/navigation";
 
-const Pagination = ({page, hasPrev, hasNext}) => {
-  const rooter  = useRouter()    
+const Pagination = ({ page, hasPrev, hasNext }) => {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
-      <button className={styles.left}
-      disabled={!hasPrev}
-      onClick={() => rooter.push('?page=${page -1} ')}
+      <button
+        className={styles.button}
+        disabled={!hasPrev}
+        onClick={() => router.push(`?page=${page - 1}`)}
       >
         Previous
-        </button>
-      <button className={styles.right}
-       disabled={!hasNext}
-       onClick={() => rooter.push('?page=${page +1} ')}
+      </button>
+      <button
+        disabled={!hasNext}
+        className={styles.button}
+        onClick={() => router.push(`?page=${page + 1}`)}
       >
         Next
-        </button>
+      </button>
     </div>
-  ); 
+  );
 };
 
 export default Pagination;
