@@ -1,48 +1,41 @@
-"use client"
+// "use client"
+import React from "react";
 import styles from "./categoryList.module.css";
 import Link from "next/link";
-import Image from "next/image"
-import React, { useEffect, useState } from "react";
 
-const CategoryList = () => {
-  const [data, setData] = useState([]);
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-store",
+  });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/api/categories", { catch: "no-store" });
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
+  return res.json();
+};
 
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (error) {
-        throw new Error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+const CategoryList = async () => {
+  const data = await getData();
   return (
     <div className={styles.container}>
       <div className={styles.categories}>
-        {data.map((item) => (
+        {data?.map((item) => (
           <Link
-            href={`/blog?cat=${item.slug}`}
+          href={`/blog?cat=${item.slug}`}
             className={`${styles.category} ${styles[item.slug]}`}
-            key={item.id}
+            key={item._id}
           >
-            <Image
-              src={`/${item.image}`}
-              alt={item.title}
-              width={32}
-              height={32}
-              className={styles.image}
-            />
-            <p>{item.title}</p>
+            {item.image && (
+              <img
+                src={item.image}
+                alt=""
+                width={32}
+                height={32}
+                className={styles.image}
+              />
+            )}
+            {item.title}
           </Link>
         ))}
       </div>
