@@ -1,6 +1,6 @@
-import Featured from "./components/Featured/featured";
+import Featured from "./components/Featured/Featured";
 import Menu from "./components/Menu/Menu";
-import CardList from "./components/cardList/cardList";
+import CardList from "./components/cardList/CardList";
 import styles from "./homepage.module.css";
 
 export default function Home({searchParams}) {
