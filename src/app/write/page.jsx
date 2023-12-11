@@ -1,69 +1,156 @@
+
 "use client";
+
 import Image from "next/image";
 import styles from "./writePage.module.css";
-import { useState } from "react";
-import { useSession } from "next-auth/react";
-import ReactQuill from "react-quill";
+import { useEffect, useState } from "react";
 import "react-quill/dist/quill.bubble.css";
 import { useRouter } from "next/navigation";
-
-const page = () => {
-
+import { useSession } from "next-auth/react";
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+import { app } from "@/utilis/firebase";
+import ReactQuill from "react-quill";
+const WritePage = () => {
+  const { status } = useSession();
   const router = useRouter();
-  const {status} = useSession();
 
   const [open, setOpen] = useState(false);
+  const [file, setFile] = useState(null);
+  const [media, setMedia] = useState("");
   const [value, setValue] = useState("");
+  const [title, setTitle] = useState("");
+  const [catSlug, setCatSlug] = useState("");
 
-  if(status ==="loading") {
-    return <div className={styles.loading}>Loading...</div>
-  }
+  useEffect(() => {
+    const storage = getStorage(app);
 
-   if(status ==="authenticated") {
-    router.push("/")
-  }
+    const upload = () => {
+      const name = new Date().getTime() + file.name;
+      const storageRef = ref(storage, name);
 
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+          switch (snapshot.state) {
+            case "paused":
+              console.log("Upload is paused");
+              break;
+            case "running":
+              console.log("Upload is running");
+              break;
+          }
+        },
+        (error) => {},
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            setMedia(downloadURL);
+          });
+        }
+      );
+    };
+
+    file && upload();
+  }, [file]);
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/");
+    }
+  }, [status, router]);
+
+  const slugify = (str) =>
+    str
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/[\s_-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+  const handleSubmit = async () => {
+    const res = await fetch("/api/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        desc: value,
+        image: media,
+        slug: slugify(title),
+        catSlug: catSlug || "style",
+      }),
+    });
+
+    if (res.status === 200) {
+      const data = await res.json();
+      router.push(`/posts/${data.slug}`);
+    }
+  };
 
   return (
     <div className={styles.container}>
       <input
-        className={styles.title}
         type="text"
-        placeholder="Article Title..."
+        placeholder="Title"
+        className={styles.input}
+        onChange={(e) => setTitle(e.target.value)}
       />
+      <select
+        className={styles.select}
+        onChange={(e) => setCatSlug(e.target.value)}
+      >
+        <option value="lifestyle">lifestyle</option>
+        <option value="entertainment">entertainment</option>
+        <option value="sport">sport</option>
+        <option value="technology">technology</option>
+        <option value="trending">trending</option>
+        <option value="health">health</option>
+      </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image src="/plusicon.png" alt="plus" height={16} width={16} />
+          <Image src="/plusicon.png" alt="" width={16} height={16} />
         </button>
         {open && (
-          <div className={styles.addbtnDiv}>
-            <button className={styles.Addbutton}>
-              <Image src="/imageIcon.png" alt="image" height={16} width={16} />
+          <div className={styles.add}>
+            <input
+              type="file"
+              id="image"
+              onChange={(e) => setFile(e.target.files[0])}
+              style={{ display: "none" }}
+            />
+            <button className={styles.addButton}>
+              <label htmlFor="image">
+                <Image src="/imageIcon.png" alt="" width={16} height={16} />
+              </label>
             </button>
-            <button className={styles.Addbutton}>
-              <Image
-                src="/external.jpeg"
-                alt="external"
-                height={16}
-                width={16}
-              />
+            <button className={styles.addButton}>
+              <Image src="/external.jpeg" alt="" width={16} height={16} />
             </button>
-            <button className={styles.Addbutton}>
-              <Image src="/VideoIcon.png" alt="Video" height={16} width={16} />
+            <button className={styles.addButton}>
+              <Image src="/VideoIcon.png" alt="" width={16} height={16} />
             </button>
           </div>
         )}
         <ReactQuill
-          className={styles.textarea}
+          className={styles.textArea}
           theme="bubble"
           value={value}
           onChange={setValue}
-          placeholder="Write Article here..."
+          placeholder="Write your content here..."
         />
       </div>
-      <button className={styles.publish}>Publish</button>
+      <button className={styles.publish} onClick={handleSubmit}>
+        Publish
+      </button>
     </div>
   );
 };
 
-export default page;
+export default WritePage;
