@@ -1,6 +1,6 @@
 import { authOption } from "@/utilis/auth";
 import NextAuth from "next-auth";
 
-const handle = NextAuth( authOption);
+const handler = NextAuth(authOption);
 
-export { handle as GET, handle as POST};
+export { handler as GET, handler as POST };
