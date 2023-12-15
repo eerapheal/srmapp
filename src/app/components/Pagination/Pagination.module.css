@@ -23,14 +23,17 @@
 }
 
 .button {
-  padding: 8px 12px;
   background-color: #1a8917;
-  color: #fff;
-  font-size: 22px;
-  font-weight: 300;
-  border: none;
-  border-end-start-radius: 10px;
-  border-start-end-radius: 10px;
+  display: inline-flex;
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .right:disabled {

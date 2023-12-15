@@ -4,7 +4,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const EditorPick = () => {
+
+
+const EditorPick = ({searchParams}) => {
+  // const page = parseInt(searchParams.page) || 1;
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Editors Pick</h1>

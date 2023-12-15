@@ -8,26 +8,23 @@ const Card = ({ key, item }) => {
   return (
     <div className={styles.container} key={key}>
   <div className={styles.card}>
+  <Link href={`/posts/${item.slug}`} alt="items" className={styles.item}>
   {item.image && (
-        <div className={styles.postImg}>
+        <div  className={styles.imgContainer}>
+
           <Image src={item.image} alt="" fill className={styles.image} />
         </div>
       )}
-      <div className={styles.content}>
+      <div className={styles.textContainer}>
         <div className={styles.detail}>
           <span className={styles.date}>
             {item.createdAt.substring(0, 10)} {" "}
           </span>
-          <span className={styles.category}>{item.catSlug}</span>
+          {/* <span className={styles.category}>{item.catSlug}</span> */}
         </div>
-        <Link href={`/posts/${item.slug}`}>
-          <h1 className={styles.title}>{item.title}</h1>
-        </Link>
         <div className={styles.desc} dangerouslySetInnerHTML={{ __html: item?.desc.substring(0, 139) }}/>
-        <Link href={`/posts/${item.slug}`} className={styles.action}>
-          Read More
-        </Link>
       </div>
+      </Link>
   </div>
     </div>
   );

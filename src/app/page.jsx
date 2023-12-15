@@ -1,19 +1,37 @@
-import Featured from "./components/Featured/Featured";
-import Menu from "./components/Menu/Menu";
+import Featured from "./components/featured/Featured";
+// import PostCategories from "./postCategories/page";
 import CardList from "./components/cardList/CardList";
 import styles from "./homepage.module.css";
+import HealthPost from "./postCategories/Health/Health";
+import SportPost from "./postCategories/Sport/Sport";
+import EnterntementPost from "./postCategories/Enterntement/Enterntement";
+import LifestylePost from "./postCategories/Lifestyle/Lifestyle";
+import TreadingPost from "./postCategories/Treading/Treading";
+import TechnologyPost from "./postCategories/Technology/Technology";
 
-export default function Home({searchParams}) {
+export default function Home({ searchParams }) {
   const page = parseInt(searchParams.page) || 1;
 
   return (
-  <div className={styles.container}>
-     <Featured />
-     
-<div className={styles.content}>
-  <CardList page={page}/>
-  <Menu />
-</div>
-  </div>
+    <div className={styles.container}>
+      <Featured />
+      
+      <div className={styles.content}>
+        <div>
+        <CardList page={page} />
+        </div>
+        <div>
+        <SportPost page={page} />
+        <TechnologyPost page={page} />
+        <TreadingPost page={page} />
+        <LifestylePost page={page} />
+        <EnterntementPost page={page} />
+        <HealthPost page={page} /> 
+         {/* <PostCategories page={page} /> */}
+        </div>
+
+
+      </div>
+    </div>
   );
 }

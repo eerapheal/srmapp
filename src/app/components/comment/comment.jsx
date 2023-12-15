@@ -45,7 +45,7 @@ const Comment = ({ postSlug }) => {
       {status === "authenticated" ? (
         <div className={styles.write}>
           <textarea
-            placeholder="write a comment..."
+            placeholder="Drop your comment..."
             className={styles.input}
             value={desc} 
             onChange={(e) => setDesc(e.target.value)}
@@ -74,7 +74,7 @@ const Comment = ({ postSlug }) => {
                   )}
                   <div className={styles.userInfo}>
                     <span className={styles.username}>{item.user.name}</span>
-                    <span className={styles.date}>{item.createdAt}</span>
+                    <span className={styles.date}>{item.createdAt.substring(0, 10)}</span>
                   </div>
                 </div>
                 <p className={styles.desc}>{item.desc}</p>

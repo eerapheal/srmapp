@@ -1,25 +1,37 @@
 .container {
- margin-top: 50px;
+  margin-top: 50px;
+}
+
+.title {
+  color: var(--softTextColor);
+  margin-bottom: 30px;
 }
 
 .write {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
+ margin: 8px 0;
 }
 
 .input {
-  padding: 15px;
+  padding: 20px;
   width: 100%;
 }
 
-.commentUser {
-margin-bottom: 40px;
+.button {
+  padding: 4px 6px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.comment {
-margin-bottom: 40px;
+.comments{
+  margin-top: 50px;
+}
+
+.comment{
+  margin-bottom: 50px;
 }
 
 .user {
@@ -29,14 +41,27 @@ margin-bottom: 40px;
   margin-bottom: 20px;
 }
 
-.Userimage {
-object-fit: cover;
-border-radius: 50%;
+.image {
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .userInfo {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-top: 10px;
+  gap: 5px;
+  color: var(--softTextColor);
+}
+
+.username {
+  font-weight: 500;
+}
+
+.date{
+  font-size: 14px;
+}
+
+.desc{
+  font-size: 18px;
+  font-weight: 300;
 }

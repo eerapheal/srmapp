@@ -1,7 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .categories {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   gap: 10px;
 }
 
@@ -33,6 +39,11 @@
   color: var(  --textColor);
 }
 .category.technology {
+  background-color:  var(--header);
+  color: var(  --textColor);
+}
+
+.category.enterntement {
   background-color:  var(--header);
   color: var(  --textColor);
 }

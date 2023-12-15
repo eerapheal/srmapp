@@ -1,8 +1,13 @@
 import styles from "./singlePage.module.css";
 import Image from "next/image";
-import Menu from "../../components/Menu/Menu";
 import Comment from "../../components/comment/comment";
-
+import TechnologyPost from "../../postCategories/Technology/Technology";
+import CardList from "../../postCategories/cardList/CardList";
+import HealthPost from "../../postCategories/Health/Health";
+import SportPost from "../../postCategories/Sport/Sport";
+import EnterntementPost from "../../postCategories/Enterntement/Enterntement";
+import LifestylePost from "../../postCategories/Lifestyle/Lifestyle";
+import TreadingPost from "../../postCategories/Treading/Treading";
 const getData = async (slug) => {
   const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
     cache: "no-store",
@@ -15,7 +20,8 @@ const getData = async (slug) => {
   return res.json();
 };
 
-const SinglePage = async ({ params }) => {
+const SinglePage = async ({ params, searchParams }) => {
+  const page = parseInt(searchParams.page) || 1;
   const { slug } = params;
 
   const data = await getData(slug);
@@ -28,12 +34,21 @@ const SinglePage = async ({ params }) => {
           <div className={styles.user}>
             {data?.user?.image && (
               <div className={styles.userImgDiv}>
-                <Image src={data.user.image} alt="" fill className={styles.userimagelogo} />
+                <Image
+                  src={data.user.image}
+                  alt=""
+                  fill
+                  className={styles.userimagelogo}
+                />
               </div>
             )}
             <div className={styles.userTextContainer}>
-              <span className={styles.username}>{data?.user?.name || "Unknown User"}</span>
-              <span className={styles.date}>01.01.2024</span>
+              <span className={styles.username}>
+                {data?.user?.name || "Unknown User"}
+              </span>{" "}
+              <span className={styles.date}>
+                {data?.createdAt.substring(0, 10)}
+              </span>
             </div>
           </div>
         </div>
@@ -50,10 +65,22 @@ const SinglePage = async ({ params }) => {
             dangerouslySetInnerHTML={{ __html: data?.desc }}
           />
           <div className={styles.comment}>
-            <Comment postSlug={slug}/>
+            <Comment postSlug={slug} />
+          </div>
+          <div className={styles.postcontent}>
+            <div className={styles.Cardcontent}>
+              <CardList page={page} />
+            </div>
+            <div className={styles.categoriescontent}>
+              <SportPost page={page} />
+              <TechnologyPost page={page} />
+              <TreadingPost page={page} />
+              <LifestylePost page={page} />
+              <EnterntementPost page={page} />
+              <HealthPost page={page} />
+            </div>
           </div>
         </div>
-        <Menu />
       </div>
     </div>
   );
