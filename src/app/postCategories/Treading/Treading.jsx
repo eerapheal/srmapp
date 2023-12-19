@@ -6,7 +6,7 @@ import Card from "../card/Card";
 
 const getData = async (page) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=treading`,
+    `http://localhost:3000/api/posts?page=${page}&cat=trending`,
     {
       cache: "no-store",
     }
@@ -58,7 +58,7 @@ const TreadingPost = ({ page }) => {
       </div>
       <div style={{ margin: "10px" }}>
         <Link
-          href={`/blog?cat=treading`}
+          href={`/blog?cat=trending`}
           style={{
             backgroundColor: "blue",
             padding: "5px 8px",

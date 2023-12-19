@@ -48,7 +48,12 @@
   color: var(  --textColor);
 }
 
-.category.treading {
+.category.trending {
+  background-color: var(--header);
+  color: var(  --textColor);
+}
+
+.category.features {
   background-color: var(--header);
   color: var(  --textColor);
 }

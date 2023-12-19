@@ -15,23 +15,22 @@ export default function Home({ searchParams }) {
   return (
     <div className={styles.container}>
       <Featured />
-      
+
       <div className={styles.content}>
-        <div>
-        <CardList page={page} />
+        {/* <div className={styles.items}> */}
+        <div >
+          <CardList page={page} />
         </div>
-        <div>
-        <SportPost page={page} />
-        <TechnologyPost page={page} />
-        <TreadingPost page={page} />
-        <LifestylePost page={page} />
-        <EnterntementPost page={page} />
-        <HealthPost page={page} /> 
-         {/* <PostCategories page={page} /> */}
+        <div className={styles.cardItems}>
+          <SportPost page={page} />
+          <TechnologyPost page={page} />
+          <TreadingPost page={page} />
+          <LifestylePost page={page} />
+          <EnterntementPost page={page} />
+          <HealthPost page={page} />
         </div>
-
-
-      </div>
+        </div>
+      {/* </div> */}
     </div>
   );
 }
