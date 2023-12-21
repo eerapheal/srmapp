@@ -53,8 +53,8 @@ const HealthPost = ({ page }) => {
       </h1>
       <div className={styles.posts}>
         {displayPosts.map(
-          (item) => item && <Card item={item} key={item._id} />
-        )}
+          (item) => ( item && <Card item={item} key={item._id} />
+        ))}
       </div>
       <div style={{ margin: "10px" }}>
         <Link
