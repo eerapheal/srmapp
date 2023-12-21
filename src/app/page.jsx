@@ -1,5 +1,5 @@
-import Featured from "@/components/featured/featured";
-import CardList from "@/components/cardList/cardList";
+import Featured from "@/components/featured/Featured"
+import CardList from "@/components/cardList/CardList";
 import styles from "./homepage.module.css";
 // import GetSport from "./components/post"
 // import HealthPost from "./postCategories/Health/Health";
@@ -14,8 +14,7 @@ export default function Home({ searchParams }) {
 
   return (
     <div className={styles.container}>
-      <Featured />
-
+     <Featured />
       <div className={styles.content}>
         <div >
           <CardList page={page} />

@@ -3,8 +3,8 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 import React from "react";
 import AuthLink from "../authLink/AuthLink";
-import ThemeToggle from "../themeToggle/themeToggle";
-import CategoryList from "../categoryList/categoryList";
+import ThemeToggle from "../themeToggle/ThemeToggle";
+import CategoryList from "../categoryList/FategoryList";
 
 const Header = () => {
   return (
