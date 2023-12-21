@@ -1,5 +1,4 @@
 import Featured from "./components/featured/Featured";
-// import PostCategories from "./postCategories/page";
 import CardList from "./components/cardList/CardList";
 import styles from "./homepage.module.css";
 import HealthPost from "./postCategories/Health/Health";
@@ -17,7 +16,6 @@ export default function Home({ searchParams }) {
       <Featured />
 
       <div className={styles.content}>
-        {/* <div className={styles.items}> */}
         <div >
           <CardList page={page} />
         </div>
@@ -30,7 +28,7 @@ export default function Home({ searchParams }) {
           <HealthPost page={page} />
         </div>
         </div>
-      {/* </div> */}
+
     </div>
   );
 }
