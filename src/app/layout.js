@@ -1,9 +1,9 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "../provider/themeProvider"
-import { ThemeContextProvider } from "../context/ThemeContext";
+import { ThemeProvider } from "@/provider/themeProvider"
+import { ThemeContextProvider } from "@/context/ThemeContext";
 import AuthProvider from "@/provider/authProvider";
 const inter = Inter({ subsets: ["latin"] });
 

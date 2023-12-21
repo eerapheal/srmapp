@@ -3,9 +3,9 @@ import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ item }) => {
+const Card = ({ item, key }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} key={key}>
       <div className={styles.card}>
         {item.image && (
           <div className={styles.postImg}>
