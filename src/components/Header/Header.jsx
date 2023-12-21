@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import AuthLink from "../authLink/AuthLink";
 import ThemeToggle from "../themeToggle/themeToggle";
-import CategoryList from "../CategoryList/CategoryList";
+import CategoryList from "../categoryList/categoryList";
 
 const Header = () => {
   return (

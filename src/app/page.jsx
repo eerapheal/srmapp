@@ -1,5 +1,5 @@
-import Featured from "@/components/featured/Featured";
-import CardList from "@/components/cardList/CardList";
+import Featured from "@/components/featured/featured";
+import CardList from "@/components/cardList/cardList";
 import styles from "./homepage.module.css";
 // import GetSport from "./components/post"
 // import HealthPost from "./postCategories/Health/Health";

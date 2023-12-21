@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./Pagination.module.css";
+import styles from "./pagination.module.css";
 import React from "react";
 import { useRouter } from "next/navigation";
 
