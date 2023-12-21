@@ -1,4 +1,4 @@
-import Featured from "@/components/featured/Featured"
+import Featured from "@/components/featured/featuredPost"
 import CardList from "@/components/cardList/CardList";
 import styles from "./homepage.module.css";
 // import GetSport from "./components/post"
