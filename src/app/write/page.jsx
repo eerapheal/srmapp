@@ -14,6 +14,7 @@ import {
 } from "firebase/storage";
 import { app } from "@/utilis/firebase";
 import ReactQuill from "react-quill";
+import axios from "axios";
 
 const WritePage = () => {
   const { status } = useSession();
@@ -74,20 +75,20 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
-      method: "POST",
-      body: JSON.stringify({
+    try {
+      const response = await axios.post("http://localhost:3000/api/posts", {
         title,
         desc: value,
         image: media,
         slug: slugify(title),
         catSlug: catSlug || "style",
-      }),
-    });
+      });
 
-    if (res.status === 200) {
-      const data = await res.json();
+      const data = response.data;
       router.push(`/posts/${data.slug}`);
+    } catch (error) {
+      console.error("Error submitting data:", error);
+      // Handle the error gracefully, you might want to show an error message to the user
     }
   };
 

@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./categoryList.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const getData = async () => {
   const res = await fetch("http://localhost:3000/api/categories", {
@@ -27,7 +28,7 @@ const CategoryList = async () => {
             key={item._id}
           >
             {item.image && (
-              <img
+              <Image
                 src={item.image}
                 alt=""
                 width={32}
