@@ -3,7 +3,7 @@ import styles from "./featured.module.css";
 
 import React from "react";
 
-const Featured = () => {
+const FeaturedPost = () => {
   
   return (
     <div className={styles.container}>
@@ -28,4 +28,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default FeaturedPost;
