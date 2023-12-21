@@ -10,7 +10,7 @@ const FeaturedPost = () => {
       <h1 className={styles.headertitle}>Sant Ralph Magazine</h1>
       <div className={styles.card}>
         <div className={styles.postImg}>
-          <Image src="/p1.jpeg" alt="lo" classNam={styles.image} fill />
+          <Image src="/p1.jpeg" alt="lo" className={styles.image} fill />
         </div>
         <div className={styles.content}>
           <h1 className={styles.title}>yes testing</h1>

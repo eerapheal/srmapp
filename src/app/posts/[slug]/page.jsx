@@ -54,7 +54,7 @@ const SinglePage = async ({ params, searchParams }) => {
         </div>
         {data?.image && (
           <div className={styles.postImgDiv}>
-            <Image src={data.image} alt="" fill className={styles.image} />
+            <Image src={data.image} alt="image" fill className={styles.image} />
           </div>
         )}
       </div>
