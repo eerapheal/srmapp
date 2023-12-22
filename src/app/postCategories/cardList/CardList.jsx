@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./cardList.module.css";
-import Card from "../../components/card/Card";
+import Card from "../card/Card";
 import Link from "next/link";
 
 const getData = async (page, cat) => {
