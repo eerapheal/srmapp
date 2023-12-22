@@ -4,9 +4,10 @@ import styles from "../postCategories.module.css";
 import Link from "next/link";
 import Card from "../card/Card";
 
+const apiUrl = process.env.API_URL;
 const getData = async (page) => {
   const res = await fetch(
-    `http://127.0.0.1:3000/api/posts?page=${page}&cat=health`,
+    `${apiUrl}/api/posts?page=${page}&cat=health`,
     {
       cache: "no-store",
     }

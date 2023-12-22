@@ -74,9 +74,10 @@ const WritePage = () => {
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
 
+      const apiUrl = process.env.API_URL;   
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:3000/api/posts", {
+      const response = await axios.post(`${apiUrl}/api/posts`, {
         title,
         desc: value,
         image: media,

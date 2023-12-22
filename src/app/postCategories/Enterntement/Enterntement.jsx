@@ -5,8 +5,9 @@ import Link from "next/link";
 import Card from "../card/Card";
 
 const getData = async (page) => {
+  const apiUrl = process.env.API_URL;
   const res = await fetch(
-    `http://127.0.0.1:3000/api/posts?page=${page}&cat=enterntement`,
+    `${apiUrl}/api/posts?page=${page}&cat=enterntement`,
     {
       cache: "no-store",
     }
