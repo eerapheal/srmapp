@@ -1,6 +1,6 @@
 import styles from "./singlePage.module.css";
 import Image from "next/image";
-import Comment from "../../components/comment/comment";
+import Comment from "@/components/comment/comment";
 // import TechnologyPost from "../../postCategories/Technology/Technology";
 // import CardList from "../../postCategories/cardList/CardList";
 // import HealthPost from "../../postCategories/Health/Health";
@@ -9,7 +9,7 @@ import Comment from "../../components/comment/comment";
 // import LifestylePost from "../../postCategories/Lifestyle/Lifestyle";
 // import TreadingPost from "../../postCategories/Treading/Treading";
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const res = await fetch(`http://127.0.0.1:3000/api/posts/${slug}`, {
     cache: "no-store",
   });
 
@@ -47,7 +47,7 @@ const SinglePage = async ({ params, searchParams }) => {
                 {data?.user?.name || "Unknown User"}
               </span>{" "}
               <span className={styles.date}>
-                {data?.createdAt.substring(0, 10)}
+                {data?.createdAt?.substring(0, 10)}
               </span>
             </div>
           </div>
@@ -60,10 +60,13 @@ const SinglePage = async ({ params, searchParams }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.post}>
-          <div
-            className={styles.description}
-            dangerouslySetInnerHTML={{ __html: data?.desc }}
-          />
+          <div className={styles.description}>
+            {data?.desc ? (
+              <div dangerouslySetInnerHTML={{ __html: data.desc }} />
+            ) : (
+              <p>No description available.</p>
+            )}
+          </div>
           <div className={styles.comment}>
             <Comment postSlug={slug} />
           </div>
