@@ -1,5 +1,5 @@
 import styles from "./BlogPage.module.css";
-import CardList from "@/components/cardList/cardList";
+import CardList from "../../components/cardList/cardList";
 // import HealthPost from "../postCategories/Health/Health";
 // import SportPost from "../postCategories/Sport/Sport";
 // import EnterntementPost from "../postCategories/Enterntement/Enterntement";
