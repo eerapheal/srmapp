@@ -1,13 +1,13 @@
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comment from "@/components/comment/comment";
-// import TechnologyPost from "../../postCategories/Technology/Technology";
-// import CardList from "../../postCategories/cardList/CardList";
-// import HealthPost from "../../postCategories/Health/Health";
-// import SportPost from "../../postCategories/Sport/Sport";
-// import EnterntementPost from "../../postCategories/Enterntement/Enterntement";
-// import LifestylePost from "../../postCategories/Lifestyle/Lifestyle";
-// import TreadingPost from "../../postCategories/Treading/Treading";
+import TechnologyPost from "../../postCategories/Technology/Technology";
+import CardList from "../../postCategories/cardList/CardList";
+import HealthPost from "../../postCategories/Health/Health";
+import SportPost from "../../postCategories/Sport/Sport";
+import EnterntementPost from "../../postCategories/Enterntement/Enterntement";
+import LifestylePost from "../../postCategories/Lifestyle/Lifestyle";
+import TreadingPost from "../../postCategories/Treading/Treading";
 const getData = async (slug) => {
   const res = await fetch(`http://127.0.0.1:3000/api/posts/${slug}`, {
     cache: "no-store",
@@ -72,16 +72,16 @@ const SinglePage = async ({ params, searchParams }) => {
           </div>
           <div className={styles.postcontent}>
             <div className={styles.Cardcontent}>
-              {/* <CardList page={page} /> */}
+              <CardList page={page} />
             </div>
-            {/* <div className={styles.categoriescontent}>
+            <div className={styles.categoriescontent}>
               <SportPost page={page} />
               <TechnologyPost page={page} />
               <TreadingPost page={page} />
               <LifestylePost page={page} />
               <EnterntementPost page={page} />
               <HealthPost page={page} />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
