@@ -1,5 +1,5 @@
 import FeaturedPost from "../components/featured/featuredPost"
-import CardList from "../components/cardList/cardList";
+import CardList from "./cardList/cardList";
 import styles from "./homepage.module.css";
 // import GetSport from "./components/post"
 // import HealthPost from "./postCategories/Health/Health";
