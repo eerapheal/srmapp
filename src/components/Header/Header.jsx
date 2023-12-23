@@ -13,7 +13,7 @@ const Header = () => {
         <div className={styles.logo}>
           <Image
             className={styles.logoicon}
-            src="/Srmlogo.jpg"
+            src="/favicon.ico.png"
             alt="SRM"
             width={50}
             height={50}

@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logoDiv}>
-        <Image className={styles.logo} src="/Srmlogo.jpg" alt="SRM" width={50} height={50} />
+        <Image className={styles.logo} src="/favicon.ico.png" alt="SRM" width={50} height={50} />
         <h1 className={styles.pagename}>Sant Ralph Magazine</h1>
       </div>
       <p className={styles.details}>
-        Lorem ipsum eum neque fuga amet quo quas saepe ex voluptate esse vero, error sunt
+      Explore the latest trends in sports, health, technology, lifestyle, and entertainment. Stay informed and entertained with our diverse range of articles on cutting-edge topics.",
       </p>
       <div className={styles.social}>
         <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
