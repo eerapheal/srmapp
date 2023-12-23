@@ -11,18 +11,6 @@ export const metadata = {
   title: "Sant Ralph Magazine",
   description:
     "Explore the latest trends in sports, health, technology, lifestyle, and entertainment. Stay informed and entertained with our diverse range of articles on cutting-edge topics.",
-  name: "keywords",
-  content:
-    "sports, health, technology, lifestyle, entertainment, trending topics, wellness, fitness, gadgets, fashion, culture, news, reviews",
-  rel: "icon",
-  href: "@/public/favicon.ico.png",
-  property: "og:title",
-  content: "Sant Ralph Magazine - Your Source for Diverse Content",
-  property: "og:description",
-  content:
-    "Explore the latest trends in sports, health, technology, lifestyle, and entertainment. Stay informed and entertained with our diverse range of articles on cutting-edge topics.",
-  property: "og:image",
-  content: "image_url_here",
 };
 
 export default function RootLayout({ children }) {
