@@ -4,7 +4,6 @@
   align-items: center;
 }
 
-
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -25,35 +24,35 @@
 }
 
 .category.sport {
-  background-color:  var(--header);
-  color: var(  --textColor);
+  background-color: var(--header);
+  color: var(--textColor);
 }
 
 .category.lifestyle {
-  background-color:  var(--header);
-  color: var(  --textColor);
+  background-color: var(--header);
+  color: var(--textColor);
 }
 
 .category.health {
-  background-color:  var(--header);
-  color: var(  --textColor);
+  background-color: var(--header);
+  color: var(--textColor);
 }
 .category.technology {
-  background-color:  var(--header);
-  color: var(  --textColor);
+  background-color: var(--header);
+  color: var(--textColor);
 }
 
 .category.enterntement {
-  background-color:  var(--header);
-  color: var(  --textColor);
+  background-color: var(--header);
+  color: var(--textColor);
 }
 
 .category.trending {
   background-color: var(--header);
-  color: var(  --textColor);
+  color: var(--textColor);
 }
 
 .category.features {
   background-color: var(--header);
-  color: var(  --textColor);
+  color: var(--textColor);
 }

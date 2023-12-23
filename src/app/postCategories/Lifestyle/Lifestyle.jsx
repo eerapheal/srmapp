@@ -6,12 +6,9 @@ import Card from "../card/Card";
 
 const apiUrl = process.env.API_URL;
 const getData = async (page) => {
-  const res = await fetch(
-    `${apiUrl}/api/posts?page=${page}&cat=lifestyle`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`${apiUrl}/api/posts?page=${page}&cat=lifestyle`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed");
@@ -42,7 +39,7 @@ const LifestylePost = ({ page }) => {
   return (
     <div className={styles.container}>
       <h1
-         style={{
+        style={{
           color: "blue",
           fontSize: "1.1rem",
           margin: "25px",

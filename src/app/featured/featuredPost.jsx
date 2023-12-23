@@ -4,7 +4,6 @@ import styles from "./featured.module.css";
 import React from "react";
 
 const FeaturedPost = () => {
-  
   return (
     <div className={styles.container}>
       <h1 className={styles.headertitle}>Sant Ralph Magazine</h1>

@@ -13,9 +13,9 @@ export default function Home({ searchParams }) {
 
   return (
     <div className={styles.container}>
-     <FeaturedPost />
+      <FeaturedPost />
       <div className={styles.content}>
-        <div >
+        <div>
           <CardList page={page} />
         </div>
         <div className={styles.cardItems}>
@@ -26,8 +26,7 @@ export default function Home({ searchParams }) {
           <EnterntementPost page={page} />
           <HealthPost page={page} />
         </div>
-        </div>
-
+      </div>
     </div>
   );
 }

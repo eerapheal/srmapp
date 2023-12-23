@@ -15,7 +15,7 @@
 .light {
   --bg: #ecf3ed;
   --textColor: #050605;
-  --header: #E3FCF7;
+  --header: #e3fcf7;
   --smallTextColor: #1f261f;
   --softBg: #a6a6a6;
 }
@@ -28,11 +28,10 @@
   --softTextColor: #a6a6a6;
 }
 
-
-
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  z-index:1;
 }
 
 a {
@@ -85,7 +84,7 @@ a {
 }
 
 .ql-container {
-font-size: 28px !important;
+  font-size: 28px !important;
 }
 
 .qull > .ql-container > .ql-editor.ql-blank::before {

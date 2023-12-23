@@ -38,7 +38,7 @@
 @media (min-width: 36em) {
   .cardItems {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
   }
 }
@@ -46,7 +46,7 @@
 @media (min-width: 48em) {
   .cardItems {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 5px;
   }
 }
@@ -54,7 +54,7 @@
 @media (min-width: 62em) {
   .cardItems {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 5px;
   }
 }
@@ -67,7 +67,7 @@
 }
 
 @media (min-width: 90em) {
- .cardItems {
+  .cardItems {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }

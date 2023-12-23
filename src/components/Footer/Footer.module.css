@@ -1,9 +1,9 @@
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    padding: 35px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px 0;
 }
 
 .logoDiv {
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
   padding: 25px 0;
 }
 
@@ -40,7 +40,6 @@
   flex-direction: column;
   gap: 10px;
 }
-
 
 /* .containercategories {
   display: flex;

@@ -36,7 +36,7 @@ const Comment = ({ postSlug }) => {
       body: JSON.stringify({ desc, postSlug }),
     });
     mutate();
-    setDesc(""); 
+    setDesc("");
   };
 
   return (
@@ -47,7 +47,7 @@ const Comment = ({ postSlug }) => {
           <textarea
             placeholder="Drop your comment..."
             className={styles.input}
-            value={desc} 
+            value={desc}
             onChange={(e) => setDesc(e.target.value)}
           />
           <button className={styles.button} onClick={handleSubmit}>
@@ -74,7 +74,9 @@ const Comment = ({ postSlug }) => {
                   )}
                   <div className={styles.userInfo}>
                     <span className={styles.username}>{item.user.name}</span>
-                    <span className={styles.date}>{item.createdAt.substring(0, 10)}</span>
+                    <span className={styles.date}>
+                      {item.createdAt.substring(0, 10)}
+                    </span>
                   </div>
                 </div>
                 <p className={styles.desc}>{item.desc}</p>

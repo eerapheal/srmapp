@@ -4,6 +4,7 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 10;
   cursor: pointer;
   display: none;
 }
@@ -27,13 +28,12 @@
   flex-direction: column;
   gap: 50px;
 }
-@media screen  and (max-width: 640px){
-    .burger {
-      display: flex;
-    }
-
-    .link {
-        display: none;
-    }
+@media screen and (max-width: 640px) {
+  .burger {
+    display: flex;
   }
 
+  .link {
+    display: none;
+  }
+}

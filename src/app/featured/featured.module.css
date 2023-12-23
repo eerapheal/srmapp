@@ -29,7 +29,7 @@
 }
 
 .card a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .content {
@@ -51,7 +51,7 @@
 
 .desc {
   margin-top: 0.5rem;
-  color: #6B7280;
+  color: #6b7280;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -65,13 +65,13 @@
   font-weight: 500;
   align-items: center;
   gap: 0.25rem;
-  background-color: #2563EB;
+  background-color: #2563eb;
   padding: 4px 8px;
   border-radius: 4px;
 }
 
 .action span {
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .action:hover span {

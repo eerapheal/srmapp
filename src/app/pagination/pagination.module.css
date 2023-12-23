@@ -14,11 +14,10 @@
   border: none;
   border-end-start-radius: 10px;
   border-start-end-radius: 10px;
-
 }
 
 .button:disabled {
-  border-color: rgba(220,20,60,0.473);
+  border-color: rgba(220, 20, 60, 0.473);
   cursor: not-allowed;
 }
 
@@ -37,6 +36,6 @@
 }
 
 .right:disabled {
-  border-color: rgba(220,20,60,0.473);
+  border-color: rgba(220, 20, 60, 0.473);
   cursor: not-allowed;
 }

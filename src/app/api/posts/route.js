@@ -17,7 +17,7 @@ export const GET = async (req) => {
       ...(cat && { catSlug: cat }),
     },
     orderBy: {
-      createdAt: "desc", 
+      createdAt: "desc",
     },
   };
 

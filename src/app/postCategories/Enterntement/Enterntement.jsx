@@ -6,12 +6,9 @@ import Card from "../card/Card";
 
 const getData = async (page) => {
   const apiUrl = process.env.API_URL;
-  const res = await fetch(
-    `${apiUrl}/api/posts?page=${page}&cat=enterntement`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`${apiUrl}/api/posts?page=${page}&cat=enterntement`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed");

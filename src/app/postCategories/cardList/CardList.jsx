@@ -5,12 +5,9 @@ import Link from "next/link";
 
 const apiUrl = process.env.API_URL;
 const getData = async (page, cat) => {
-  const res = await fetch(
-    `${apiUrl}/api/posts?page=${page}&cat=${cat || ""}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`${apiUrl}/api/posts?page=${page}&cat=${cat || ""}`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed");
