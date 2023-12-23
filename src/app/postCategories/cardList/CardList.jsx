@@ -3,6 +3,7 @@ import styles from "./cardList.module.css";
 import Card from "../card/Card";
 import Link from "next/link";
 
+const apiUrl = process.env.API_URL;
 const getData = async (page, cat) => {
   const res = await fetch(
     `${apiUrl}/api/posts?page=${page}&cat=${cat || ""}`,
