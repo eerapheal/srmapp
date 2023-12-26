@@ -4,8 +4,8 @@ import styles from "../postCategories.module.css";
 import Link from "next/link";
 import Card from "../card/Card";
 
+const apiUrl = process.env.API_URL;
 const getData = async (page) => {
-  const apiUrl = process.env.API_URL;
   const res = await fetch(`${apiUrl}/api/posts?page=${page}&cat=enterntement`, {
     cache: "no-store",
   });
