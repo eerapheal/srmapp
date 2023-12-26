@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
   },
   env: {
-    API_URL: 'https://srmagazine.vercel.app',
+    API_URL: 'http://127.0.0.1:3000',
   },
 }
 
