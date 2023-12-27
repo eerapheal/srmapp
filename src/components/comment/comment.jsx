@@ -22,16 +22,15 @@ const fetcher = async (url) => {
 
 const Comment = ({ postSlug }) => {
   const { status } = useSession();
-
-  const { data, mutate, isLoading } = useSWR(
-    `http://127.0.0.1:3000/api/comments?postSlug=${postSlug}`,
+  const { data, mutate, isLoading } = useSWR(process.env.API_URL +
+    `/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
   const [desc, setDesc] = useState("");
 
   const handleSubmit = async () => {
-    await fetch("http://127.0.0.1:3000/api/comments", {
+    await fetch(process.env.API_URL + "/api/comments", {
       method: "POST",
       body: JSON.stringify({ desc, postSlug }),
     });

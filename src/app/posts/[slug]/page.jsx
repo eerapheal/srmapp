@@ -1,6 +1,6 @@
 import styles from "./singlePage.module.css";
 import Image from "next/image";
-import Comment from "@/components/comment/comment";
+import Comment from "../../../components/comment/comment";
 import TechnologyPost from "../../postCategories/Technology/Technology";
 import CardList from "../../postCategories/cardList/CardList";
 import HealthPost from "../../postCategories/Health/Health";
@@ -10,7 +10,7 @@ import LifestylePost from "../../postCategories/Lifestyle/Lifestyle";
 import TreadingPost from "../../postCategories/Treading/Treading";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://127.0.0.1:3000/api/posts/${slug}`, {
+  const res = await fetch(process.env.API_URL + `/api/posts/${slug}`, {
     cache: "no-store",
   });
 

@@ -76,7 +76,7 @@ const WritePage = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post(`http://127.0.0.1:3000/api/posts`, {
+      const response = await axios.post(process.env.API_URL + `/api/posts`, {
         title,
         desc: value,
         image: media,

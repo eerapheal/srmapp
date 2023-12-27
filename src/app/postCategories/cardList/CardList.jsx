@@ -3,9 +3,8 @@ import styles from "./cardList.module.css";
 import Card from "../card/Card";
 import Link from "next/link";
 
-const apiUrl = process.env.API_URL;
 const getData = async (page, cat) => {
-  const res = await fetch(`${apiUrl}/api/posts?page=${page}&cat=${cat || ""}`, {
+  const res = await fetch(process.env.API_URL + `/api/posts?page=${page}&cat=${cat || ""}`, {
     cache: "no-store",
   });
 
