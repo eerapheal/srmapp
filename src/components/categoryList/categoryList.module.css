@@ -7,16 +7,19 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 4px;
 }
 
 .category {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   text-transform: capitalize;
   border-radius: 15px;
   padding: 5px 8px;
+  font-family: Domine, serif;
+  letter-spacing: 0.05em;
+  font-weight: 300;
 }
 
 .image {

@@ -6,59 +6,101 @@
   margin-top: 50px;
 }
 
+.headerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 750px;
+  margin-bottom: 20px;
+  background-color: blue;
+  padding: 20px 22px;
+  border-radius: 89px;
+  text-align: center;
+}
+
 .headertitle {
   font-size: 1.5rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-family: Domine, serif;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  color: #fff;
 }
 
-.postImg {
-  flex: 1;
-  height: 150px;
-  border-radius: 1rem;
-  position: relative;
+.subtitle {
+  font-size: 1.0rem;
+  line-height: 1rem;
+  font-family: Domine, serif;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  color: #fff;
 }
 
-.card {
-  max-width: 300px;
+
+
+
+
+/* card styles */
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+  max-width: 390px;
   border-radius: 0.1rem;
-  background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border: 1px solid transparent;
+  margin: 10px 0;
 }
 
-.card a {
-  text-decoration: none;
+.imgContainer {
+  width: 50%;
+  aspect-ratio: 1/1;
+  position: relative;
 }
-
-.content {
-  padding: 1.1rem;
+.category {
+  padding: 5px 8px;
+  border-radius: 10px;
+  color: var(--textColor);
+  width: max-content;
 }
 
 .image {
   object-fit: cover;
   border-radius: 0.5rem;
-  background-color: rgb(239, 205, 255);
+  background-color: rgb(83, 19, 112);
+}
+.textContainer {
+  width: 50%;
+  padding: 8px 0;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.995rem;
+  line-height: 1.25rem;
 }
 
 .title {
-  color: #111827;
-  font-size: 1.125rem;
+  font-size: 1.525rem;
   line-height: 1.75rem;
   font-weight: 600;
 }
 
 .desc {
   margin-top: 0.5rem;
-  color: #6b7280;
-  font-size: 0.875rem;
+  font-size: 0.995rem;
   line-height: 1.25rem;
 }
 
 .action {
   display: inline-flex;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   color: #ffffff;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -76,4 +118,23 @@
 
 .action:hover span {
   transform: translateX(4px);
+}
+
+@media (min-width: 36em) {
+  .item {
+    max-width: 690px;
+  }
+}
+
+@media (min-width: 48em) {
+
+}
+
+@media (min-width: 62em) {
+ 
+  
+}
+
+@media (min-width: 75em) {
+
 }

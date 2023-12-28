@@ -11,3 +11,11 @@
   align-items: center;
   gap: 10px;
 }
+
+.title {
+  margin: 25px;
+  font-family: Domine, serif;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  color: var(--textColor);
+}

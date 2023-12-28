@@ -28,6 +28,10 @@
   align-items: center;
   gap: 10px;
   font-size: 22px;
+  font-family: Domine, serif;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: var(--textColor);
 }
 
 @media screen and (max-width: 1280px) {
