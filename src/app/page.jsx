@@ -13,12 +13,13 @@ export default function Home({ searchParams }) {
 
   return (
     <div className={styles.container}>
-      <FeaturedPost />
+      <FeaturedPost page={page} />
       <div className={styles.content}>
         <div>
           <CardList page={page} />
         </div>
         <div className={styles.cardItems}>
+        
           <SportPost page={page} />
           <TechnologyPost page={page} />
           <TreadingPost page={page} />
