@@ -16,10 +16,10 @@
 }
 .mobileMenu {
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 0;
   background-color: var(--bg);
-  height: calc(100vh -100px);
+  height: 100vh;
   width: 100%;
   font-size: 35px;
   display: flex;
@@ -27,6 +27,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 50px;
+  z-index: 100;
 }
 @media screen and (max-width: 640px) {
   .burger {

@@ -9,18 +9,22 @@ const AuthLink = () => {
 
   const { status } = useSession();
 
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
   return (
     <>
       {status === "unauthenticated" ? (
-        <Link href={`login`} className={styles.link}>
+        <Link href={`login`} className={styles.link} onClick={closeMenu}>
           Login
         </Link>
       ) : (
         <>
-          <Link href={`/write`} className={styles.link}>
+          <Link href={`/write`} className={styles.link} onClick={closeMenu}>
             Create
           </Link>
-          <span onClick={signOut} className={styles.link}>
+          <span onClick={() => { signOut(); closeMenu(); }} className={styles.link}>
             Logout
           </span>
         </>
@@ -32,15 +36,15 @@ const AuthLink = () => {
       </div>
       {open && (
         <div className={styles.mobileMenu}>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/" onClick={closeMenu}>Home</Link>
+          <Link href="/" onClick={closeMenu}>About</Link>
+          <Link href="/" onClick={closeMenu}>Contact</Link>
           {status === "unauthenticated" ? (
-            <Link href={`/login`}>Login</Link>
+            <Link href={`/login`} onClick={closeMenu}>Login</Link>
           ) : (
             <>
-              <Link href={`/write`}>Create</Link>
-              <span onClick={signOut} className={styles.link} >
+              <Link href={`/write`} onClick={closeMenu}>Create</Link>
+              <span onClick={() => { signOut(); closeMenu(); }}>
                 Logout
               </span>
             </>
