@@ -1,9 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .item {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 100vw;
-  max-width: 390px;
+  max-width: 410px;
   border-radius: 0.1rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border: 1px solid transparent;
