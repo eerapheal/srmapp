@@ -2,6 +2,8 @@
 
 import styles from "./pagination.module.css";
 import React from "react";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+
 import { useRouter } from "next/navigation";
 
 const Pagination = ({ page, hasPrev, hasNext }) => {
@@ -14,14 +16,15 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}`)}
       >
-        Previous
+        <FaArrowAltCircleLeft />
+
       </button>
       <button
         disabled={!hasNext}
         className={styles.button}
         onClick={() => router.push(`?page=${page + 1}`)}
       >
-        Next
+        <FaArrowAltCircleRight />
       </button>
     </div>
   );
