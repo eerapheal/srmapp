@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.logoDiv}>
         <Image
           className={styles.logo}
-          src="/favicon.ico.png"
+          src="/srlogo.png"
           alt="SRM"
           width={50}
           height={50}
