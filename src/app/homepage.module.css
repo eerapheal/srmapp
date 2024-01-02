@@ -6,27 +6,10 @@
 }
 
 @media (min-width: 36em) {
-  .mainHeath {
-    display: grid;
-    gap: 0.2rem;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 48em) {
-  .mainHeath {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-
-
-@media (min-width: 36em) {
   .cardItems {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 15px;
   }
 }
 
@@ -34,7 +17,7 @@
   .cardItems {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 15px;
   }
 }
 
