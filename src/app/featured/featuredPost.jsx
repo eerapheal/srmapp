@@ -1,27 +1,17 @@
-import Image from "next/image";
 import styles from "./featured.module.css";
-
-import React from "react";
 
 const FeaturedPost = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headertitle}>Sant Ralph Magazine</h1>
-      <div className={styles.card}>
-        <div className={styles.postImg}>
-          <Image src="/p1.jpeg" alt="lo" className={styles.image} fill />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>yes testing</h1>
-          <p className={styles.desc}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-            illum, culpa suscipit deserunt eius iusto dignissimos qui, quasi
-          </p>
-          <a className={styles.action} href="#">
-            Find out more
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
+      <div className={styles.headerDiv}>
+        <h1 className={styles.headertitle}>Sant Ralph Magazine</h1>
+        <h3 className={styles.subtitle}>
+          Discover the latest trends in sports, health, technology, lifestyle,
+          and entertainment. From exclusive athlete interviews to cutting-edge
+          tech insights, we keep you informed and entertained with a diverse
+          range of articles. Stay on the pulse of contemporary living with our
+          dynamic content.
+        </h3>
       </div>
     </div>
   );
