@@ -9,13 +9,21 @@
 .logoDiv {
   display: flex;
   align-items: center;
-  padding: 25px 0 0;
+  padding: 25px 20px 0 0;
 }
 
 .logo {
   border-radius: 10%;
   object-fit: cover;
 }
+
+.pagename {
+  font-size: 1.525rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: blue;
+  margin-left: 25px;
+ }
 
 .social {
   display: flex;
@@ -27,11 +35,8 @@
 
 .footerlinks {
   display: flex;
-  /* align-items: center; */
-  /* flex-direction: column; */
   text-align: center;
   justify-content: space-between;
-  /* gap: 50px; */
 }
 
 .links {
@@ -40,12 +45,6 @@
   flex-direction: column;
   gap: 10px;
 }
-
-/* .containercategories {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-} */
 
 .categories {
   display: flex;

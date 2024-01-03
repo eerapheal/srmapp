@@ -3,11 +3,9 @@
 }
 
 .wrapper {
-  background-color: var(--softBg);
-  padding: 150px 200px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 30px;
   border: 10px;
 }
 
@@ -16,14 +14,17 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content:center;
   border: none;
   color: azure;
   font-weight: bold;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn:first-child {
   background-color: rgb(248, 50, 50);
+  text-align: center;
 }
 
 .btn:nth-child(2) {
