@@ -17,10 +17,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <script 
-        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4048338451491396"
-        crossorigin="anonymous">      
-     </script>
+      <meta
+            name="description"
+            content="Discover the latest trends in sports, health, lifestyle, entertainment, technology, and history with Sant Ralph Magazine. Stay informed and entertained with our diverse range of articles on cutting-edge topics."
+          />
+        <title>        
+          Sant Ralph Magazine - Trending in Sports, Health, Lifestyle,
+          Entertainment, Technology, and History
+        </title>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4048338451491396"
+          crossorigin="anonymous"
+        ></script>
       </head>
       <body className={inter.className}>
         <AuthProvider>
