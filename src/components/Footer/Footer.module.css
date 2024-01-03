@@ -18,11 +18,11 @@
 }
 
 .pagename {
-  font-size: 1.525rem;
+  font-size: 1rem;
   line-height: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   color: blue;
-  margin-left: 25px;
+  margin-left: 10px;
  }
 
 .social {

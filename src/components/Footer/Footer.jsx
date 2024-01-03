@@ -43,8 +43,6 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.containercategories}>
-          <span className={styles.title}>Categories</span>{" "}
-          {/* Corrected the closing tag */}
           <div className={styles.categories}>
             <Link
               href="/blog?cat=lifestyle"
