@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4048338451491396"
           crossorigin="anonymous"
         ></script>
+        <meta name="google-site-verification" content="0xgogS7Z8xDZMzwf0vo-dBesEYrX2JmFx5MMJT8hAc0" />
       </head>
       <body className={inter.className}>
         <AuthProvider>
