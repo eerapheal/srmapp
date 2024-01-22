@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title:
-    "Sant Ralph Magazine - Trending in Sports, Health, Lifestyle, Entertainment, Technology, and History",
+    "Sant Ralph Magazine",
   description:
     "Explore the latest trends in sports, health, technology, lifestyle, and entertainment. Stay informed and entertained with our diverse range of articles on cutting-edge topics.",
 };
@@ -18,17 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta
-          name="description"
-          content="Discover the latest trends in sports, health, lifestyle, entertainment, technology, and history with Sant Ralph Magazine. Stay informed and entertained with our diverse range of articles on cutting-edge topics."
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:title" content="Sant Ralph Magazine" />
-        <meta
-          property="og:description"
-          content="Discover the latest trends in sports, health, lifestyle, entertainment, technology, and history with Sant Ralph Magazine. Stay informed and entertained with our diverse range of articles on cutting-edge topics."
-        />
+        
+        <meta property="og:image" content="<generated>" />
+<meta property="og:image:alt" content="About Acme" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://srmspot.com" />
         <meta
           name="facebook-domain-verification"
